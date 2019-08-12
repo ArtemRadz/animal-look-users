@@ -1,0 +1,13 @@
+#user {
+  display: flex;
+  align-items: center;
+}
+
+#user .user-img {
+  max-width: 150px;
+  height: auto;
+}
+
+#user .user-container {
+  padding: 15px;
+}
