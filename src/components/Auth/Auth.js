@@ -6,12 +6,12 @@ import Button from '../Button/Button';
 
 import './Auth.css';
 
-const Auth = ({ loadingState }) => {
+const Auth = () => {
   const handleSignIn = () => auth.signInWithPopup(googleAuthProvider);
 
   return (
     <div id="sign-in">
-      {!loadingState && <Button title={'Sign In'} handleClick={handleSignIn} />}
+      <Button title={'Sign In'} handleClick={handleSignIn} />
     </div>
   );
 };
