@@ -3,3 +3,11 @@
   color: #4fc3f7;
   padding: 15px;
 }
+
+#main-component .user-card-container {
+  padding: 15px;
+}
+
+#main-component .user-card-items {
+  display: flex;
+}

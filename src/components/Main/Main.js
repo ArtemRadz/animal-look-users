@@ -4,6 +4,7 @@ import { auth, database } from '../../firebase/firebase';
 
 import Auth from '../Auth/Auth';
 import User from '../User/User';
+import UserCard from '../UserCard/UserCard';
 
 import './Main.css';
 
@@ -42,7 +43,21 @@ const Main = () => {
 
   return (
     <main id="main-component">
-      {currentUser ? <User user={currentUser} /> : <Auth />}
+      {currentUser ? (
+        <>
+          <User user={currentUser} />
+          <section className="user-card-container">
+            <h2>All users</h2>
+            <div className="user-card-items">
+              {Object.entries(users).map(([key, user]) => (
+                <UserCard key={key} user={user} />
+              ))}
+            </div>
+          </section>
+        </>
+      ) : (
+        <Auth />
+      )}
     </main>
   );
 };
