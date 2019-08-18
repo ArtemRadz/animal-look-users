@@ -31,6 +31,7 @@ const Main = () => {
             photoURL,
             email
           }))(user);
+
           userRef.current.set(userData);
         });
 
@@ -50,7 +51,7 @@ const Main = () => {
             <h2>All users</h2>
             <div className="user-card-items">
               {Object.entries(users).map(([key, user]) => (
-                <UserCard key={key} user={user} />
+                <UserCard key={key} uid={key} user={user} />
               ))}
             </div>
           </section>
