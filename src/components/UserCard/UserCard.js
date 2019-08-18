@@ -24,7 +24,7 @@ const UserCard = ({ uid, user }) => {
 
     uploadImage.then(snapshot => {
       snapshot.ref.getDownloadURL().then(downloadURL => {
-        userRe.child('photoURL').set(downloadURL);
+        userRef.child('photoURL').set(downloadURL);
       });
     });
   };
