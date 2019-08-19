@@ -5,3 +5,8 @@
 #user-card-item label {
   display: block;
 }
+
+#user-card-item progress {
+  margin-top: 15px;
+  display: block;
+}
